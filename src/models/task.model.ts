@@ -21,7 +21,23 @@ export default function (app: Application) {
     estimated: {
       type: DataTypes.INTEGER,
       allowNull:false
-    }
+    },
+
+    squashed: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull:false
+    },
+    internalInterruptions: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull:false
+    },
+    externalInterruptions: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      allowNull:false
+    },
   }, {
     hooks: {
       beforeCount(options: any) {
